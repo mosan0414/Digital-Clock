@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=display-width">
+<title>최용훈의 시계</title>
+<link rel="stylesheet" href="clock.css">
+<link href="https://fonts.cdnfonts.com/css/digital-numbers" rel="stylesheet">
+
+
+
+</head>
+
+
+<body>
+
+  <div class="clock">
+
+   <div class="clock-display">
+
+     <div id="time"></div>
+     <div id="battery">100%</div>
+     
+      
+      
+    </div>
+
+  <div class="alarm">
+
+     <input type="text" id="alarmTime" placeholder="HH:MM:SS">
+     <button id="addAlarm">알람 추가</button>
+
+  </div>
+
+  <div class="alarm-list">
+    <h2>알람 목록</h2>
+    <ul id="alarms"></ul>
+  </div>
+
+  <div>
+    <button id="clear">CLR</button>
+    <script>
+    // 알람 초기화 함수
+    function clearAlarms() {
+    const alarmsList = document.getElementById('alarms');
+    alarmsList.innerHTML = ''; // 알람 리스트 초기화
+    }
+
+    // CLEAR 버튼 클릭 시 알람 초기화 함수 호출
+    document.getElementById('clear').addEventListener('click', clearAlarms);
+    </script>
+  </div>
+
+
+
+</div>
+  
+
+<script src="clock.js"></script>
+<script src="alarm.js"></script>
+
+<!-- 오디오 요소를 추가합니다. -->
+<audio id="alarmSound" src="buzzer.wav"></audio>
+
+
+
+</body>
+
+
+
+
+
+
+</html>
